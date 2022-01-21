@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #56ccf2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #2f80ed,
+    #56ccf2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #2f80ed,
+    #56ccf2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.2);
+  width: 400px;
+  border-radius: 7px;
+  border: 1px solid #fff;
+}
+
+.wrapper header {
+  color: #1b1b1b;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 16px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+
+header img {
+  cursor: pointer;
+  font-size:  20px;
+  margin-right: 8px;
+  display: none;
+}
+.wrapper.active header img {
+    font-size: 30px;
+    margin-left:5px;
+    display: block;
+}
+.wrapper.active .input-part {
+    display: none;
+}
+.wrapper .input-part .info-text {
+  
+    font-size: 17px;
+    text-align: center;
+    padding: 17px 10px;
+    border-radius: 7px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.info-text.error {
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.info-text.pending {
+    display: block;
+    color: #0c5460;
+    background: #82e5dd;
+    border: 1px solid #bee5eb;
+}
+
+.wrapper .input-part {
+    display: block;
+    margin: 20px 25px 30px;
+}
+ 
+
+.wrapper.active .input-part {
+    display: none;
+    margin: 20px 25px 30px;
+}
+ 
+
+.wrapper .input-part p {
+  font-size: 18px;
+}
+
+.input-part input, button{
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+  border: 1px solid #fff;
+}
+
+.input-part input {
+  text-align: center;
+  border: 1px solid #bfbfbf;
+}
+.input-part input:focus , :valid {
+    border: 2px solid #1774b6;
+}
+
+.input-part button {
+  color: #fff;
+  cursor: pointer;
+  background: #2292b8;
+}
+
+.input-part .father {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-part .seperator1 {
+  height: 1px;
+  width: 40%;
+  background: #fff;
+  color: #fff;
+  margin: 25px 0;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-part .seperator2 {
+  height: 1px;
+  width: 40%;
+  background: #fff;
+  color: #fff;
+  margin: 25px 0;
+  font-size: 19px;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+.seperator::before {
+  content: "yoki";
+  padding: 0 15px;
+  color:#fff;
+}
+
+
+.wrapper .weather-part {
+    margin: 30px 0 0 ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+} 
+.weather-part img {
+    min-width: 125px;
+}
+
+.weather-part .temp {
+    display:flex;
+    font-size: 72px;
+    font-weight: 500;
+
+}
+.weather-part .temp .numb {
+    font-weight: 600;
+}
+
+.weather-part .temp sup {
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display:inline-block;
+}
+
+
+.weather-part .location {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+    
+}
+  ion-icon {
+   width: 40px;
+    font-size: 21px;
+    color: #054470;
+}
+
+.weather-part .bottom-details {
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+
+}
+.weather-part .column {
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.column i {
+    font-size: 40px;
+    color: #56ccf2;
+
+}
+.column.humidity {
+    border-left: 1px solid #fff;
+}
+
+.details .temp , .humidity span{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+.details .temp sup {
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 0 1px;
+}
+.details p {
+    margin-top: -6px;
+
+}
+
